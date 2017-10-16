@@ -1,5 +1,7 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
+
+
+@extends('layouts.app')
+@section('content')
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -65,7 +67,7 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        {{--<div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -76,7 +78,7 @@
                     @endauth
                 </div>
             @endif
-
+--}}
             <div class="content">
                 <div class="title m-b-md">
                    <h4> ALL</h4>
@@ -92,3 +94,4 @@
         </div>
     </body>
 </html>
+@endsection

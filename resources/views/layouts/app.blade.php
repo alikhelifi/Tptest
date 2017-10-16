@@ -9,15 +9,22 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
      <title>Laravel</title>
+    <link href="{{ asset('_public/css/custom-styles.css') }}" rel="stylesheet">
+
+    <!-- Scripts -->
+
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="http://use.fontawesome.com/874dbadbd7.js"></script>
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+<div id="app-layout">
+    <div class="menu">
+        <div class="navbar">
             <div class="container">
+                <div class="collapse navbar-collapse" >
+
                 <div class="navbar-header">
 
                     <!-- Collapsed Hamburger -->
@@ -29,14 +36,15 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <ul class="nav navbar-nav">
+                    <a class="navbar-brand" href="{{ url('/home') }}" style="color: white">
                      Home
                     </a>
+                    </ul>
+
                 </div>
 
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
+                <!-- Right Side Of Navbar -->
                         &nbsp;
                     </ul>
 
@@ -103,6 +111,8 @@
                 </div>
             </div>
         </nav>
+            <br>
+            <br>
         @include('partials.errors')
         @include('partials.success')
         @yield('content')

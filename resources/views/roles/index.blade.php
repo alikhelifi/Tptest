@@ -6,25 +6,9 @@
                     Create new </a> </div>
             <div class="panel-body">
                 <ul class="list-group">
-                    <table border="0" align="center">
-                        <tr>
-                            <th>Name</th>
-                            <th>Role</th>
-
-                        </tr>
-                        @foreach($roles as $role)
-                            {{--
-                                                    <li class="list-group-item"><a href="/companies/{{$comment->id}}"> {{$company->name}}</a></li>
-                            --}}
-
-                            <tr>
-{{--
-                                <td>{{$user->role->name}}</td>
---}}
-                                <td>{{$role->name}}</td>
-
-                        @endforeach
-                    </table>
+                    @foreach($roles as $role)
+                        <li class="list-group-item"><a href="/users/{{$role->id}}"> {{$role->name}}</a></li>
+                    @endforeach
                 </ul>
             </div>
         </div>
