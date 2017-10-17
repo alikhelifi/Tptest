@@ -3,7 +3,7 @@
     <div class="container">
         <div class="col-md-9 col-lg-9 col-sm-9 pull-left">
             <div class="row col-md-12 col-lg-12 col-sm-12" style="background: white; margin: 10px">
-                <form method="post" action="{{ route('users.update',[$user->id]) }}">
+                <form method="PUT" action="{{ route('users.update',[$user->id]) }}">
                     {{csrf_field()}}
                     <input type="hidden" name="_method" value="put">
                     <div class="from_group">

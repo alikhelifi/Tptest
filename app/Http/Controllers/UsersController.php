@@ -16,10 +16,6 @@ class UsersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index1()
-    {
-        return view('users.view');
-    }
     public function index()
     {
         if(Auth::check())
